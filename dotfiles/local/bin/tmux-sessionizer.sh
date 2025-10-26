@@ -6,7 +6,7 @@ if [[ $# -eq 1 ]]; then
     selected=$1
 else
     selected=$(
-        (find "$WORKSPACE" -mindepth 1 -maxdepth 1 -type d; echo "$HOME/") | fzf
+        (find "$WORKSPACE" -mindepth 1 -maxdepth 1 -type d; echo "$HOME/"; echo "$HOME/suckless") | fzf
     )
 fi
 
