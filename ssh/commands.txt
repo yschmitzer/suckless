@@ -1,0 +1,2 @@
+openssl enc -d -aes-256-cbc -pbkdf2 -in ./id_ed25519.enc -out ~/.ssh/id_ed25519
+chmod 600 ~/.ssh/id_ed25519
