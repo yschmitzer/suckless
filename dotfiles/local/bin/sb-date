@@ -1,0 +1,2 @@
+#!/usr/bin/env bash
+printf "%(%Y-%m-%d %H:%M)T\n"
