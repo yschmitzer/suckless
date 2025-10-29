@@ -17,11 +17,12 @@ git_branch() {
 }
 
 RESET="\[\033[0m\]"
-FG="\[\033[38;5;223m\]"
-BLUE="\[\033[38;5;109m\]"
-GREEN="\[\033[38;5;142m\]"
-ORANGE="\[\033[38;5;208m\]"
-MAGENTA="\[\033[38;5;175m\]"
+FG="\[\033[38;5;252m\]"      # Foreground (text)
+BLUE="\[\033[38;5;109m\]"    # Pale steel blue
+GREEN="\[\033[38;5;108m\]"   # Muted olive green
+ORANGE="\[\033[38;5;137m\]"  # Brownish orange
+MAGENTA="\[\033[38;5;139m\]" # Muted mauve
+RED="\[\033[38;5;167m\]"     # Coral red (for git branch or warning)
 
-PS1="${FG}\u${RESET} ${BLUE}@${RESET} ${FG}\h${RESET} ${MAGENTA}in${RESET} ${FG}\w${RESET} ${ORANGE}\$(git_branch)${RESET}\n${GREEN}> ${RESET}"
+PS1="${FG}\u${RESET} ${BLUE}@${RESET} ${FG}\h${RESET} ${MAGENTA}in${RESET} ${FG}\w${RESET} ${RED}\$(git_branch)${RESET}\n${GREEN}> ${RESET}"
 
