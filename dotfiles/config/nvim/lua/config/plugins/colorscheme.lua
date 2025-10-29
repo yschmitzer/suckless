@@ -1,12 +1,17 @@
 return {
-    "ellisonleao/gruvbox.nvim",
+    "rebelot/kanagawa.nvim",
     lazy = false,
-    name = "gruvbox",
+    name = "kanagawa",
     priority = 1000,
     config = function()
-        require("gruvbox").setup({
-            transparent_mode = true,
+        require("kanagawa").setup({
+            theme = "dragon",
+            background = {
+                dark = "dragon",
+                light = "dragon"
+            },
         })
-        vim.cmd.colorscheme "gruvbox"
+        -- vim.cmd.colorscheme "kanagawa"
+        vim.cmd("colorscheme kanagawa")
     end,
 }
