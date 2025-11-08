@@ -3,6 +3,7 @@
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
+alias imgview='feh -d --draw-tinted --edit --font yudit/24 --menu-font yudit/24 --on-last-slide hold'
 
 bind '"\e[5~": history-search-backward'
 bind '"\e[6~": history-search-forward'
