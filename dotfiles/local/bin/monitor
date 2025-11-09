@@ -2,7 +2,7 @@
 
 connected=$(xrandr --query | grep " connected" | awk '{print $1}')
 count=$(echo "$connected" | wc -l)
-laptop="eDP"
+laptop="DP-4"
 
 if [ "$count" -eq 1 ]; then
     xrandr --output "$laptop" --auto
@@ -12,7 +12,10 @@ if [ "$count" -eq 1 ]; then
 
 elif [ "$count" -eq 2 ]; then
     external=$(echo "$connected" | grep -v "$laptop")
-    xrandr --output "$laptop" --off --output "$external" --auto
+    #use this and comment out rest if only one display should be used
+    # xrandr --output "$laptop" --off --output "$external" --auto
+    xrandr --output "$laptop" --auto --pos 0x0
+    xrandr --output "$external" --auto --primary --right-of "$laptop"
 
 elif [ "$count" -gt 2 ]; then
     xrandr --output "$laptop" --off
